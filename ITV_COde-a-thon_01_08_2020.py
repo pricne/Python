@@ -1,5 +1,7 @@
 #read file from folder and save in a list
-#Make a seperate list for File name and Extention 
+#Make a seperate list for File name and Extention
+#Check Size if the file, convert in KB, save it as a string in a list
+
 import os, time
 i = 0
 fileName = []
@@ -8,7 +10,7 @@ fileSize = []
 fileCreatedTime = []
 fileModifiedTime = []
 onlyfiles = []
-Location = "C:/Users/OMOLP059/Desktop/2.Scheduler&File_Handling"
+Location = input("Enter Location of folder in your PC: ")
 os.chdir(Location)
 files = os.listdir(Location)
 
@@ -39,14 +41,6 @@ def Get_data(Position):
 
 Get_data(Location)
 print_data()
-'''
-#print(onlyfiles)# print list with all files and extention
-print(fileName)   # It print file name
-print(fileExtension)   # Print File Extensions
-print(fileSize)   # It print file size
-print(fileCreatedTime)   # It print file size
-print(fileModifiedTime)   # It print file size
-'''
 
 
 
