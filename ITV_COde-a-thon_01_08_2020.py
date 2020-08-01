@@ -10,10 +10,10 @@ fileModifiedTime = []
 onlyfiles = []
 Location = "C:/Users/OMOLP059/Desktop/2.Scheduler&File_Handling"
 os.chdir(Location)
-No_of_files = os.listdir(Location)
+files = os.listdir(Location)
 
 def print_data():
-    for i in range(len(No_of_files)-1):
+    for i in range(len(files)-1):
         print("File_Name : ",fileName[i])
         print("File_Extension : ",fileExtension[i])
         print("File_Size : ",fileSize[i])
@@ -21,7 +21,7 @@ def print_data():
         print("Date_Modified : ",fileModifiedTime[i])
 
 def Get_data(Position):
-    onlyfiles = [f for f in No_of_files if os.path.isfile(os.path.join(Position, f))]
+    onlyfiles = [f for f in files if os.path.isfile(os.path.join(Position, f))]
     #print(onlyfiles)                   # print list with all files and extention
     
     for files in onlyfiles:
